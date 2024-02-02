@@ -1,0 +1,162 @@
+include<iostream>
+using namespace std;
+void first_fit(int blocksize[],int blocks,int processsize[],int process)
+{
+	int allocated[process];
+	for(int i=0;i<process;i++)
+	{
+		allocated[i]=-1;
+	}
+	for(int i=0;i<process;i++)
+	{
+		for(int j=0;j<blocks;j++)
+		{
+			if(blocksize[j]>=processsize[i])
+			{
+				allocated[i]=j;
+				blocksize[j]=blocksize[j]-processsize[i];
+				break;
+			}
+		}
+	}
+	for(int i=0;i<process;i++)
+	{
+		cout<<i+1<<"\t"<<processsize[i]<<"\t";
+		if(allocated[i]!=-1)
+		{
+			cout<<allocated[i]+1<<endl;
+		}
+		else
+		{
+			cout<<"Not allocated"<<endl;
+		}
+	}
+}
+void bestFit(int blockSize[], int m, int processSize[], int n)  
+{  
+    int allocation[n];  
+    for (int i = 0; i < n; i++)  
+        allocation[i] = -1;  
+    for (int i = 0; i < n; i++)  
+    {  
+        int bestIdx = -1;  
+        for (int j = 0; j < m; j++)  
+        {  
+            if (blockSize[j] >= processSize[i])  
+            {  
+                if (bestIdx == -1)  
+                    bestIdx = j;  
+                else if (blockSize[bestIdx] > blockSize[j])  
+                    bestIdx = j;  
+            }  
+        }  
+        if (bestIdx != -1)  
+        {  
+            allocation[i] = bestIdx;  
+            blockSize[bestIdx] -= processSize[i];  
+        }  
+    }  
+    cout << "\nProcess No.\tProcess Size\tBlock no.\n";  
+    for (int i = 0; i < n; i++)  
+    {  
+        cout << " " << i+1 << "\t\t" << processSize[i] << "\t\t";  
+        if (allocation[i] != -1)  
+            cout << allocation[i] + 1;  
+        else
+            cout << "Not Allocated";  
+        cout << endl;  
+    }  
+}
+void next_fit(int blockSize[], int m, int processSize[], int n)
+{
+    int allocation[n], j = 0, t = m - 1;
+    for(int i=0;i<n;i++)
+	{
+		allocation[i]=-1;
+	}
+    for(int i = 0; i < n; i++){
+        while (j < m){
+            if(blockSize[j] >= processSize[i]){
+                allocation[i] = j;
+                blockSize[j] -= processSize[i];
+                t = (j - 1) % m;
+                break;
+            }
+            if (t == j){
+                t = (j - 1) % m;
+                break;
+            }
+            j = (j + 1) % m;
+        }
+    }
+    cout << "\nProcess No.\tProcess Size\tBlock no.\n";
+    for (int i = 0; i < n; i++) {
+        cout << " " << i + 1 << "\t\t\t\t" << processSize[i]
+            << "\t\t\t\t";
+        if (allocation[i] != -1)
+            cout << allocation[i] + 1;
+        else
+            cout << "Not Allocated";
+        cout << endl;
+    }
+}
+void worstFit(int blockSize[], int m, int processSize[], int n) 
+{
+    int allocation[n];
+    for(int i=0;i<n;i++)
+	{
+		allocation[i]=-1;
+	}
+    for (int i=0; i<n; i++) 
+    { 
+        int wstIdx = -1; 
+        for (int j=0; j<m; j++) 
+        { 
+            if (blockSize[j] >= processSize[i]) 
+            { 
+                if (wstIdx == -1) 
+                    wstIdx = j; 
+                else if (blockSize[wstIdx] < blockSize[j]) 
+                    wstIdx = j; 
+            } 
+        } 
+        if (wstIdx != -1) 
+        { 
+            allocation[i] = wstIdx; 
+  
+            blockSize[wstIdx] -= processSize[i]; 
+        } 
+    } 
+    cout << "\nProcess No.\tProcess Size\tBlock no.\n"; 
+    for (int i = 0; i < n; i++) 
+    { 
+        cout << "   " << i+1 << "\t\t" << processSize[i] << "\t\t"; 
+        if (allocation[i] != -1) 
+            cout << allocation[i] + 1; 
+        else
+            cout << "Not Allocated"; 
+        cout << endl; 
+    } 
+} 
+int main()
+{
+	int num_mblock,num_process;
+	cout<<"Enter number of memory block : "<<endl;
+	cin>>num_mblock;
+	int memory_block[num_mblock];
+	for(int i=0;i<num_mblock;i++)
+	{
+		cout<<"Enter memory space of block "<<i+1<<" : "<<endl;
+		cin>>memory_block[i];
+	}
+	cout<<"Enter number of process : "<<endl;
+	cin>>num_process;
+	int processes[num_process];
+	for(int i=0;i<num_process;i++)
+	{
+		cout<<"Enter memory required for process "<<i+1<<" : "<<endl;
+		cin>>processes[i];
+	}
+	worstFit(memory_block,num_mblock,processes,num_process);
+	return 0;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* "Counter-reset"is used to create/reset counter 
+        here parts is a name of counter*/
+            ol
+            {
+                list-style-type: none;
+                    counter-reset: parts;
+            }
+            li::before
+            {
+                counter-increment: parts;
+                content: counters(parts,".");
+            }
+            /* counters is a inbuilt function */
+            body
+            {
+                background-color: blanchedalmond;
+                margin: 10px 200px;
+                /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+                font-weight: bolder;
+            }   
+            ol
+            {
+                color: brown;
+            }
+            
+    </style>
+</head>
+<body>
+    <ol>
+        <li> Clothes</li>
+        <li> Watches</li>
+        <li> Oerfunes</li>
+        <li> Shoes
+            <ol>
+                <li> Kids
+                    <ol>
+                        <li> Crocs</li>
+                        <li> Sandals</li>
+                    </ol></li>
+                <li> Mens</li>
+                <li> Women</li>
+            </ol>
+        </li>
+        
+    </ol>
+</body>
+</html>

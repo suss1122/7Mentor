@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* -->First-child is used to apply css to first child of parent class */
+        a:nth-child(even)
+        {
+           color: rgb(111, 79, 41);
+           font-size: 50px;      
+        }
+    </style>
+</head>
+<body>
+     <!-- 1.descendant selector
+     2.Child selecto
+     3.adjecant selecto
+     4.general sibling selector(~) -->
+
+     <a href="#">link_0</a>
+        <div>
+            <a href="">link_1</a><br>
+            <a href="">link_2</a><br>
+        </div>
+
+     <a href="">link_3</a><br>
+     <a href="">link_4</a><br>
+
+         <div>
+            <a href="">link_5</a><br>
+            <a href="">link_6</a><br>
+         </div>
+     <a href="">link_7</a><br>
+</body>
+</html>

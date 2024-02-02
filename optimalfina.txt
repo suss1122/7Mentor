@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int frameSize, pagesLength, pages[100], frames[10], pageHits = 0, pageFaults = 0;
+
+    cout << "Enter frame size: ";
+    cin >> frameSize;
+    cout << "Enter length of page reference stream: ";
+    cin >> pagesLength;
+
+    for (int i = 0; i < frameSize; i++) {
+        frames[i] = -1;
+    }
+
+    cout << "Enter page reference stream:\n";
+    for (int i = 0; i < pagesLength; i++) {
+        cin >> pages[i];
+    }
+
+    for (int i = 0; i < pagesLength; i++) {
+        int found = 0, replace = 0, farthest = i;
+
+        for (int j = 0; j < frameSize; j++) {
+
+            if (frames[j] == pages[i]) {
+                pageHits++;
+                found = 1;
+                break;
+            }
+
+
+
+            int k;
+            for (k = i; k < pagesLength; k++) {
+                if (frames[j] == pages[k]) {
+                    break;
+                }
+            }
+
+            if (k > farthest) {
+                farthest = k;
+                replace = j;
+            }
+        }
+
+        if (!found) {
+            frames[replace] = pages[i];
+            pageFaults++;
+        }
+	for(int i=0;i<frameSize;i++)
+	{
+		cout<<frames[i];
+		
+	}
+	cout<<endl;
+    }
+
+    cout << "Page hits: " << pageHits << "\nPage faults: " << pageFaults << endl;
+
+    return 0;
+}

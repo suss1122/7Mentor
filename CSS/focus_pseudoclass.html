@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
+
+            div {
+                display: flex;
+                justify-content: center;
+                border: 1px solid black;
+            }
+
+            form {
+                height: 400px;
+                width: 400px;
+                border: 2px solid black;
+
+
+            }
+
+            form input {
+                width: 100%;
+                padding: 20px 0px;
+            }
+
+            input[name="ename"]:hover{
+                background-color: lightgreen;
+            }
+
+            input[name="uname"]:focus
+            {
+                background-color: rgb(57, 96, 96);
+            }
+            input[type="text"]:focus disabled {
+                background-color: lightblue;
+            }
+            input:disabled
+            {
+                background-color: rgb(138, 87, 20);
+            }
+
+        </style>
+    </head>
+                                <!-- FOCUS USED FOR PARTICULAR UNAME TEXT WHERE IT WILL SHOW COLOR AFTER CLICKING ONLY -->
+    <body>
+
+        <div>
+            <form action="">
+                <label for="">Enter Name:</label>
+                <input type="text" name="uname"> <br><br>
+
+                <label for="">Enter Email:</label>
+                <input type="text" name="ename"> <br><br>
+
+                <label for="">Enter age:</label>
+                <input type="text" name="age" disabled > <br><br>
+
+
+                <input type="submit" name="uname"> <br><br>
+
+            </form>
+        </div>
+    </body>
+
+</html>

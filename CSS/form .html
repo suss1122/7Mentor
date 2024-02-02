@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                background-color: rgb(19, 19, 84);
+
+            }
+
+            form {
+                height: 400px;
+                width: 70%;
+                border: 2px solid greenyellow;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: rgb(2, 116, 254);
+                border-radius: 20px;
+                box-shadow: 10px 10px 20px gray;
+                padding: 100px 0px;
+                transition: all .9s ease-in-out;
+            }
+
+            input {
+                padding: 10px;
+                font-size: 40px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                border-bottom: 10px ridge red;
+                width: 70%;
+                text-align: center;
+                color: red;
+                font-weight: bold;
+               
+            }
+
+            input[type="placeholder"] {
+                color: blue;
+            }
+
+            input::placeholder {
+                color: red;
+                font-weight: bold;
+                text-align: center;
+            }
+
+            .ct1:hover{
+                width: 50%;
+                transition: width 0.6 ease-in-out;
+            }
+            .ct2:focus{
+                width: 50%;
+                transition: width 0.6s ease-in-out;
+            }    
+
+        </style>
+    </head>
+
+    <body>
+
+        <div>
+            <form action="">
+                <input type="text" name="uname" id="u1" placeholder="Enter Your Name"><br><br>
+                <input type="text" name="uname" id="u1" class="ct1" placeholder="Enter Your Email"><br><br>
+                <input type="text" name="uname" id="u1 cl" class="ct2" placeholder="Enter Your course"><br><br>
+                <input
+                    style="padding: 20px; border: none; color: white; background-color: rgb(12, 12, 59); border-radius: 20px;cursor: pointer;"
+                    type="submit" value="Login">
+            </form>
+        </div>
+    </body>
+
+</html>

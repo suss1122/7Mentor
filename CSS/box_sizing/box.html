@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div
+        {
+            background-color: black;
+            height: 100px;
+            margin-top: 10px;
+        }
+        #i1
+        {
+            padding-top: 10px;
+        }
+        #i2
+        {
+            box-sizing:border-box;
+            padding: 10px;        /* it hsow no effect because of border box prooperty */
+            padding-top: 10px;
+
+
+            /* without box sizing the padding affects the heoght and width of the descent-override  */
+            /* using border box width of the element wont be affected ; */
+        }
+    </style>
+</head>
+<body>
+    <div id="i1">
+ <!-- actual total length is width+border+padding+height -->
+ <!-- actual total width of element is width+padding+border -->
+ <!-- actual total height of element is height+padding+border -->
+    </div>
+    <div id="i2">
+
+    </div>
+</body>
+</html>

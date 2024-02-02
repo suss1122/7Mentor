@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+         {
+            /* animation-name: body1;
+            animation-timing-function: ;
+            animation-duration: 2s; */
+            background-image: radial-gradient(rgb(18, 8, 8),#ff5689,hsl(220,100%,50%));
+            /* background-color: red; */
+         }
+
+
+
+        div
+        {
+            width: 100px;
+            height: 100px;
+            background-color: #193a3e;
+            border-radius: 5px;
+            border: 2px solid black;
+            position: relative;
+            left: 50vw;
+            animation-name: div_resize;
+            animation-duration:2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        img
+        {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            left:10px;
+            top: 10px;
+            animation-name: image_resize ;
+            animation-duration:2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+
+        @keyframes div_resize
+        {
+            from{
+                top:15px;
+                width: 100px;
+            }
+             
+            to{
+                top: 100px;
+                width: 400px;
+                height: 400px;
+            }
+        }
+        @keyframes image_resize
+        {
+            from
+            {
+                top:px;
+                width:80px;
+            }
+            to{
+                top: 80px;
+                height: 240px;
+                width: 380px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <img src="/HTML/Assets/badminton.jpg" alt="">
+    </div>
+</body>
+</html>

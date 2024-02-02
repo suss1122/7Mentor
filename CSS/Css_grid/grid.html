@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main
+        {
+            background-color: red;
+            height:600px;
+            width: 100%;
+            display: grid;
+           /* grid-template-columns:100px 100px 100px ;
+           grid-template-rows:100px 100px ; */
+
+           grid-template-columns:1fr 1fr 1fr ;
+           grid-template-rows:1fr 1fr ;
+
+           /* fr is used to occupy all the space */
+
+           column-gap: 6px;
+           row-gap: 5px;
+        }
+        .demo
+        {
+            background-color: grey;
+            border: 1px solid black;
+            filter: drop-shadow(2px 3px black);
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- grid is nothing but a set of a column and a row -->
+    <div class="main">
+        <div class="demo" id="d1"></div>
+        <div class="demo" id="d2"></div>
+        <div class="demo" id="d3"></div>
+        <div class="demo" id="d4"></div>
+        <div class="demo" id="d5"></div>
+       
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- function returns a value but a constructor doesnt returns a value -->
+    <script>
+        // here e is an object when constructor person is called
+
+        //function can return a value where that function is called
+                 //whereas constructor does not return any value
+                //Constructor is used to initialize an object
+
+                //block/function scope
+                //global scope
+
+                //here,this is a global object which represents currently executing objects property in the code
+                //in below code age,name,city are having function scope whereas 
+                //this.age,this.name,this.city
+
+        function person(age,name,city)
+        {
+            this.age=age;
+            this.name=name;
+            this.city=city;
+        }
+       
+        let p1=new person(23,"suss","nagar")
+        let p2=new person(20,"harshal","nagar")
+        let p3=new person(26,"anurag","pune")
+        document.write(JSON.stringify(p1)+"<br>");
+        document.write(JSON.stringify(p2)+"<br>");
+        document.write(JSON.stringify(p3));
+    </script>
+</body>
+</html>

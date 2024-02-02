@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body
+       {
+        background-color: #322c2c;
+        position:absolute;
+        display: flex;
+       }
+        div
+        {
+            position: relative;
+            text-align: center;
+            padding:10px;
+            background-color: grey;
+            width: 100px;
+            height: 100px;
+
+        }
+        @media(max-width:500px)
+        {
+            div{
+                background-color: aqua;
+                font-size: 30px;
+                height: 150px;
+                width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- it is used to make webpages responsive  -->
+    <!-- webpages are called responsive if the webpage chahnges its size with respect to the device on which it is being opened -->
+    <div id="div1">
+        hello this is code for query
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main
+        {
+            background-color: red;
+            display: flex;
+            height: 400px;
+            justify-content: center;
+            position: relative;
+            
+        }
+
+.main > .C
+{
+    background-color: #cdc7c7;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    margin-top: 110px;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 50px;
+    border: 3px solid black;
+    border-radius: 50%;
+   
+}
+.main
+{
+    animation-name: main;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+}
+
+@keyframes main
+{
+    0%
+    {
+        background-color: rgb(156, 212, 241);
+
+    }
+    100%
+    {
+        background-color: rgb(99, 107, 125);
+    }
+
+}
+#d1,#d3
+{
+    animation-name: odd;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite ;
+    animation-direction: alternate-reverse;
+}
+#d2,#d4
+{
+    animation-name: even;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count:infinite ;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes odd{
+    0%
+    {
+        margin-top: 0px;
+        background-color: black;
+    }
+    100%
+    {
+        margin-top: 250px;
+    }
+}
+@keyframes even{
+    100%
+    {
+        margin-top: 0px;
+        background-color: black;
+    }
+    0%
+    {
+        margin-top: 250px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="main">
+            <div class="C" id="d1">1</div>
+            <div class="C" id="d2">2</div>
+            <div class="C" id="d3">3</div>
+            <div class="C" id="d4">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: coral;
+        }
+        div
+        {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(141, 94, 94);
+            border: 20px solid rgb(72, 40, 40);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+        @media print, (max-width:400px)
+        {
+            div
+            {
+                background-color: #101f19;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        media type used are screen,print,etc.
+        media type "speech" rarely used. 
+    </div>
+</body>
+</html>

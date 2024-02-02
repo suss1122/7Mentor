@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        /* div
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        } */
+        #baseball1
+        {
+            position: relative;
+            top: 10px;
+            border-radius: 50%;
+            opacity:10px;
+            filter: blur(2px);
+            /* sepia()makes the image orangish */
+             filter: sepia(100%);   
+             filter: drop-shadow(-8px -9px  10px rgb(243, 227, 227));
+         }
+        #baseball2
+        {
+            position: absolute;
+            height: 100px;
+            width: 120px;
+            left: 80px;
+            top:60px;
+            border-radius: 50%;
+            filter: hue-rotate(100deg);
+            filter: brightness(100px);
+            filter: opacity(10px);
+          
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="/HTML/Assets/baseball.jpg" alt="baseball image" id="baseball1">
+        <img src="/HTML/Assets/baseball.jpg" alt="baseball image" id="baseball2">
+    </div>
+    </body>
+</html>

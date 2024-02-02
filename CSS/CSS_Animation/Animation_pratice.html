@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: relative
+            ;
+            top: 100px;
+            background-color: black;
+        }
+        img
+        {
+            height:100px;
+            width: 100px;
+            border-radius: 50%;
+        }
+        h1
+        {
+            text-shadow: 2px 2px yellowgreen;
+             animation-name: Head;
+             animation-duration: 1s;
+             animation-iteration-count: infinite;
+
+
+        }
+        img:hover
+        {
+            animation-name: image;
+            animation-duration: 2s;
+            animation-direction: reverse;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        @keyframes Head 
+        {
+            0%
+            {
+                font-size: 30px;
+                transform: rotate(0deg);
+                color: black;
+
+            }
+            20%
+            {
+                font-size: 40px;
+                transform: rotate(20deg);
+                color: rgb(121, 73, 73);
+            }
+            40%
+            {
+                font-size: 50px;
+                transform: rotate(0deg);
+                color: rgb(154, 49, 49);
+            }
+            60%
+            {
+                
+                font-size: 30px;
+                transform: rotate(20deg);
+                color: rgb(154, 49, 49);
+            }
+            80%
+            {
+                
+                font-size: 50px;
+                transform: rotate(0deg);
+                color: rgb(172, 151, 151);
+            }
+            100%
+            {
+                
+                font-size: 30px;
+                transform: rotate(20degdeg);
+                color: rgb(228, 214, 214);
+            }
+
+        }
+        @keyframes image
+        {
+            0%
+            {
+                transform: rotate(0deg);
+            }
+            100%
+            {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the animation world!!!</h1>
+
+    <div>
+        <img src="/HTML/Assets/hockey.jpg" alt="">
+    </div>
+</body>
+</html>
